@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="visible"
+            app:expanded="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                app:collapsedTitleGravity="center_vertical|start"
+                app:contentScrim="@color/black"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:scrimAnimationDuration="1200">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/black"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="148dp"
+                        android:background="@color/black">
+
+                        <ImageView
+                            android:id="@+id/top1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent" />
+
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbardd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/textView101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Salon"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textView102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="3dp"
+                            android:layout_toEndOf="@+id/textView101"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Specialists"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_bar_main"
+            android:background="@drawable/collapse_round_corner"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="0.2"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/firstlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/specialistrv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="false"
+                        android:layout_marginTop="15dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:id="@+id/nospecialist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center_horizontal"
+                            android:text="No specialist"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addimage"
+                            cardCornerRadius="50dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="2dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="false">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal"
+                                android:minWidth="80dp"
+                                android:minHeight="80dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/ic_add_profile" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center_horizontal"
+                            android:text="Add Image"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fillViewport="true"
+                    android:scrollbarSize="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/secondlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical"
+                        tools:visibility="visible">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:gravity="top"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:paddingBottom="56dp"
+                                tools:visibility="visible">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/addphotoofspecialist"
+                                    cardCornerRadius="50dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:padding="2dp"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="50dp"
+                                    app:cardElevation="0dp"
+                                    app:cardPreventCornerOverlap="false"
+                                    app:cardUseCompatPadding="false">
+
+                                    <ImageView
+                                        android:id="@+id/specialistimage"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:minWidth="80dp"
+                                        android:minHeight="80dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_camera" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:gravity="center_horizontal"
+                                    android:text="Add Image"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/m0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/quantum_bluegrey300"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <EditText
+                                        android:id="@+id/specialistname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/segoe_ui"
+                                        android:hint="Name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/m1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/quantum_bluegrey300"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <EditText
+                                        android:id="@+id/specialistdetails"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/segoe_ui"
+                                        android:hint="Details"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/m2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/quantum_bluegrey300"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <EditText
+                                        android:id="@+id/specialistservice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:enabled="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/segoe_ui"
+                                        android:hint="Services"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:text="Please select a services"
+                                    android:textSize="18sp" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/specialistservicerv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@android:color/transparent"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/editt2"
+                android:fontFamily="@font/segoe_ui"
+                android:minWidth="200dp"
+                android:padding="10dp"
+                android:text="SUBMIT"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/submit2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editt2"
+                android:fontFamily="@font/segoe_ui"
+                android:minWidth="200dp"
+                android:padding="10dp"
+                android:text="SUBMIT"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarSplash"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:progressDrawable="@android:drawable/ic_notification_overlay"
+            android:progressTintMode="multiply"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

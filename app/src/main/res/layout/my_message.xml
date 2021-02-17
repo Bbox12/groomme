@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+ >
+
+    <TextView
+        android:id="@+id/message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|end"
+        android:background="@drawable/my_message"
+        android:elevation="2dp"
+        android:fontFamily="@font/segoe_ui"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/mdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|end"
+        android:background="@android:color/transparent"
+        android:elevation="2dp"
+        android:fontFamily="@font/segoe_ui"
+        android:padding="10dp"
+        android:textColor="@color/black_overlay"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|left"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/segoe_ui"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/rcv_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_alignLeft="@+id/name"
+            android:background="@drawable/their_message"
+            android:elevation="2dp"
+            android:fontFamily="@font/segoe_ui"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/rdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcv_body"
+            android:layout_alignParentRight="false"
+            android:layout_gravity="right|end"
+            android:background="@android:color/transparent"
+            android:elevation="2dp"
+            android:fontFamily="@font/segoe_ui"
+            android:padding="10dp"
+            android:textColor="@color/black_overlay"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</LinearLayout>

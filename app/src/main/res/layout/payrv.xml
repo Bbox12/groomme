@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:layout_gravity="top"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:gravity="top"
+    android:minWidth="320dp"
+    android:minHeight="240dp"
+    android:orientation="vertical"
+    app:layout_constraintHeight_min="wrap"
+    app:layout_constraintWidth_min="wrap">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.08"
+        android:background="@drawable/back"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.08">
+
+            <TextView
+                android:id="@+id/_tiitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_horizontal|top|center_vertical"
+                android:minEms="4"
+                android:padding="5dp"
+                android:text="Subscription"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="0.1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:minHeight="56dp"
+                android:minEms="4"
+                android:padding="5dp"
+                android:text="Subscription"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/primary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@android:color/transparent"
+            android:ems="12"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:minEms="12"
+            android:padding="5dp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/secondary_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/booknow"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="56dp"
+                android:minEms="4"
+                android:textAllCaps="true"
+                android:textColor="@color/black_overlay"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/booknow"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+                android:ems="6"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:minEms="6"
+                android:text="Book"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

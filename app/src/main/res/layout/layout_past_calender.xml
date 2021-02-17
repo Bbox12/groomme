@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/quantum_googgreen400"
+    android:fitsSystemWindows="true">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_main"
+            android:layout_gravity="top"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:fitsSystemWindows="false"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/collapse_round_corner"
+                android:orientation="vertical">
+
+                <ExpandableListView
+                    android:id="@+id/pastRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:scrollbarSize="0dp"
+                    android:nestedScrollingEnabled="false"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+</ScrollView>
+        <ProgressBar
+            android:id="@+id/progressBar8"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:pointerIcon="arrow"
+            android:progressDrawable="@android:drawable/ic_notification_overlay"
+            android:progressTintMode="multiply"
+            android:visibility="gone" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

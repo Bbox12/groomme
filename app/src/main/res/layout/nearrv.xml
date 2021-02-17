@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:background="?attr/editTextBackground"
+    android:gravity="top"
+    android:orientation="horizontal"
+    app:layout_constraintHeight_min="wrap"
+    app:layout_constraintWidth_min="wrap">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="0dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/service_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.5"
+            android:maxWidth="164dp"
+            android:maxHeight="164dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_services" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:numStars="5"
+                android:padding="2dp"
+                android:rating="5"
+                android:stepSize="1"
+                android:theme="@style/RatingBar"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/discount_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.88"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_vertical|end"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="1"
+                android:minEms="6"
+                android:padding="2dp"
+                android:textAllCaps="true"
+                android:textColor="@color/top"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/primary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.88"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="start|top"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:minEms="10"
+                android:padding="2dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="start|top"
+                android:minEms="4"
+                android:padding="2dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black_overlay"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="start|top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:minEms="4"
+            android:padding="2dp"
+            android:textAllCaps="true"
+            android:textColor="@color/black_overlay"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/booknow"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/serviceofferchild"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:minEms="4"
+            android:text="Book"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

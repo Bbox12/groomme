@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/lblListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:drawableStart="@drawable/ic_right"
+        android:drawableLeft="@drawable/ic_right"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="start"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Detanning"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|end"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal|center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/black"
+            android:gravity="center_horizontal|center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:minEms="6"
+                android:singleLine="true"
+                android:text="At Business"
+                android:textColor="@color/blue_grey_800"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/_salon_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:minEms="6"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/_salon_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:minEms="6"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:minEms="6"
+                android:singleLine="true"
+                android:text="House calls"
+                android:textColor="@color/blue_grey_800"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/_home_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:minEms="6"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/_home_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:minEms="6"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/plzselect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="start"
+        android:minEms="6"
+        android:singleLine="true"
+        android:text="Please select"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:divider="@color/black"
+        android:gravity="bottom|center_horizontal"
+        android:minHeight="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingBottom="3dp">
+
+
+        <RadioButton
+            android:id="@+id/atsalon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="0.33"
+            android:ems="6"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center_vertical"
+            android:text="AT BUSINESS"
+            android:textColor="@color/top"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/athome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="0.33"
+            android:ems="6"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center_vertical"
+            android:text="HOUSE CALLS"
+            android:textColor="@color/top"
+            android:textSize="12sp" />
+
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_edit"
+        android:visibility="gone" />
+
+</LinearLayout>

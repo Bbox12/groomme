@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        shimmer:duration="1200">
+
+        <!-- Adding 3 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/_placeholder_banner" />
+
+            <include layout="@layout/_placeholder_item" />
+
+            <include layout="@layout/_placeholder_item_main" />
+
+            <include layout="@layout/_placeholder_item" />
+
+            <include layout="@layout/_placeholder_item_main" />
+
+            <include layout="@layout/_placeholder_item" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="visible"
+        app:elevation="0dp"
+        app:expanded="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:collapsedTitleGravity="center_vertical|start"
+            app:contentScrim="@android:color/transparent"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:scrimAnimationDuration="1200">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="0dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:padding="0dp"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/top1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="56dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="120dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/_cname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="12dp"
+                        android:background="@android:color/transparent"
+                        android:ems="12"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:gravity="center|center_vertical"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Find and book best services"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="0dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:orientation="horizontal"
+                        android:paddingBottom="4dp">
+
+                        <EditText
+                            android:id="@+id/search"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/closebackground"
+                            android:drawableStart="@drawable/ic_search"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="@string/spa"
+                            android:imeOptions="actionSearch"
+                            android:importantForAutofill="no"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:minHeight="36dp"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/places_autocomplete_error_message"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp"
+                            android:theme="@style/MyEditText" />
+
+                        <Button
+                            android:id="@+id/_cancel"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/transparant"
+                            android:fontFamily="@font/segoe_ui_bold_italic"
+                            android:gravity="center"
+                            android:text="Cancel"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbardd"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:visibility="visible"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/_nscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="56dp"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:minHeight="200dp"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/topCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/view_all"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/topCategoriesRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topCategories"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <include
+                layout="@layout/deals"
+                android:visibility="visible" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/onlyservice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/newlaunch"
+                android:visibility="visible" />
+
+
+            <RelativeLayout
+                android:id="@+id/_rsex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical|center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="@color/top"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="0.5dp">
+
+                    <Button
+                        android:id="@+id/_salonservice"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/transparant"
+                        android:fontFamily="@font/segoe_ui_bold_italic"
+                        android:gravity="center"
+                        android:text="At \nSALON"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="@color/top"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="0.5dp">
+
+                    <Button
+                        android:id="@+id/_homeservice"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/transparant"
+                        android:fontFamily="@font/segoe_ui_bold_italic"
+                        android:gravity="center"
+                        android:text="At \nHOME"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/top"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:contentPadding="0.5dp">
+
+                    <Button
+                        android:id="@+id/_bothservice"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/transparant"
+                        android:fontFamily="@font/segoe_ui_bold_italic"
+                        android:gravity="center"
+                        android:text="At \nBOTH"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:id="@+id/_t2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center_vertical|start"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:text="@string/popular_salons"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                    <Button
+                        android:id="@+id/_newPopular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@drawable/ic_arrow"
+                        android:paddingStart="5dp"
+                        android:text="View All"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="right|end"
+                    android:layout_marginTop="60dp"
+                    android:background="@android:color/transparent" />
+
+
+            </RelativeLayout>
+
+
+            <include
+                layout="@layout/recommend"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center_vertical|start"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:text="More Beauticians"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                    <Button
+                        android:id="@+id/_allB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="1dp"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@drawable/ic_arrow"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="@string/view_all"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/stylist_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:focusable="true"
+                    android:visibility="visible"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    app:stackFromEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:background="@drawable/back">
+
+                    <TextView
+                        android:id="@+id/_titleYoutube"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:minHeight="51dp"
+                        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:visibility="visible">
+
+
+                    <com.google.android.youtube.player.YouTubePlayerView
+                        android:id="@+id/youtube_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/gradient">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:minHeight="51dp"
+                        android:text="Developed by"
+                        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_failed"
+                    android:ems="12"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Zanrite"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_vertical|start"
+                android:padding="5dp"
+                android:text="Our proud customers"
+                android:textColor="@color/black_overlay"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="56dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/_nscroll2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_place"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/salonrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/specialistrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarSplash"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="56dp"
+        android:progressDrawable="@drawable/triangle"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ltimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/clockbackground"
+        android:gravity="center_vertical|center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Time remaining for appointment"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="8sp"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/segoe_ui"
+            android:hint="00:00:00"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/bottomsheet_explore"
+        android:visibility="gone" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

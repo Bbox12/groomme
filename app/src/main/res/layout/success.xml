@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top"
+    android:id="@+id/success_"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue_grey_900"
+            app:expanded="true">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_success"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/top"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/s1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:editable="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Your"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/s2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/s1"
+                        android:background="@android:color/transparent"
+                        android:editable="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Bill"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_success"
+            android:background="@color/white">
+
+            <com.zanrite.groomme.helpers.MyViewPager
+                android:id="@+id/rider_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <RelativeLayout android:id="@+id/last1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/app_place"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                >
+
+
+                    <RelativeLayout
+                        android:id="@+id/layoutbill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="128dp"
+                        android:background="@color/colorPrimaryDark">
+
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="R"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="48sp" />
+
+                            <TextView
+
+                                android:id="@+id/bill_generated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoe_ui"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="48sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutbill"
+                        android:fillViewport="true">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="0.5"
+                            android:background="@color/white">
+
+
+                            <LinearLayout
+                                android:id="@+id/_L1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/howwas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:padding="10dp"
+                                    android:text="How was the service"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black_overlay"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/providername"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:padding="10dp"
+                                    android:text="How was the service"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/black"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@drawable/homecircle">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/_c1"
+                                        cardCornerRadius="40dp"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:cardBackgroundColor="@color/white"
+                                        app:cardCornerRadius="40dp"
+                                        app:cardElevation="5dp"
+                                        app:cardPreventCornerOverlap="false"
+                                        app:cardUseCompatPadding="false">
+
+                                        <com.android.volley.toolbox.NetworkImageView
+                                            android:id="@+id/driver_bill"
+                                            android:layout_width="80dp"
+                                            android:layout_height="80dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:scaleType="fitCenter" />
+
+
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+
+
+                                <RatingBar
+                                    android:id="@+id/ratingBarbill"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:numStars="5"
+                                    android:stepSize="1"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:id="@+id/salonreview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+
+                                    <RatingBar
+                                        android:id="@+id/ratingBar_c"
+                                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/r_interior"
+                                        android:layout_alignStart="@+id/ratingBar_i"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="5dp"
+                                        android:isIndicator="false"
+                                        android:numStars="5"
+                                        android:stepSize="0.5" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView10"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ratingBar_c"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/segoe_ui"
+                                        android:text="Specialist" />
+
+                                    <RatingBar
+                                        android:id="@+id/ratingBar_s"
+                                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/textView10"
+                                        android:layout_alignStart="@+id/ratingBar_c"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="5dp"
+                                        android:isIndicator="false"
+                                        android:numStars="5"
+                                        android:stepSize="0.5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ratingBar_s"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/segoe_ui"
+                                        android:text="Service" />
+
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:textColorHint="@color/quantum_googgreen500"
+                                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+                                    app:boxBackgroundMode="outline"
+                                    app:counterEnabled="false">
+
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/_comments"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:fontFamily="@font/segoe_ui"
+                                        android:gravity="start|top"
+                                        android:hint="Comment"
+                                        android:inputType="textMultiLine|textNoSuggestions"
+                                        android:minLines="2"
+                                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/quantum_googgreen500"
+                                        android:textSize="18sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/success_ride"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_below="@id/_L1"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/colorPrimaryDark"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Next"
+                                android:textColor="@color/white"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+                    </ScrollView>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:id="@+id/last2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+
+                        <EditText
+                            style="@style/Widget.AppCompat.EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/colorPrimaryDark"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center_horizontal|center"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:minHeight="121dp"
+                            android:selectAllOnFocus="false"
+                            android:singleLine="true"
+                            android:text="Add images or selfie"
+                            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="normal"
+                            android:typeface="normal" />
+
+                        <RelativeLayout
+                            android:id="@+id/deal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical|center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:id="@+id/layoutTop"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/white"
+                                android:orientation="horizontal" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_below="@id/layoutTop"
+                                android:background="@color/white" />
+
+                            <androidx.cardview.widget.CardView
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardCornerRadius="1dp"
+                                app:cardElevation="8dp"
+                                app:cardUseCompatPadding="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="100dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="0.5"
+                                android:visibility="visible">
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_horizontal|center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:background="@android:color/transparent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:background="@android:color/transparent"
+                                            android:gravity="center_vertical|center_horizontal"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <androidx.cardview.widget.CardView
+                                                app:cardBackgroundColor="@android:color/transparent"
+                                                app:cardCornerRadius="0dp"
+                                                app:cardElevation="1dp"
+                                                app:contentPadding="0.5dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@color/white"
+                                                    android:clickable="false"
+                                                    android:focusable="true"
+                                                    android:gravity="center_vertical|center"
+                                                    android:orientation="vertical"
+                                                    android:padding="0dp">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        app:cardBackgroundColor="@android:color/transparent"
+                                                        app:cardElevation="0dp"
+                                                        app:contentPadding="0.5dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@android:color/transparent"
+                                                            android:clickable="false"
+                                                            android:focusable="true"
+                                                            android:gravity="center_vertical|center"
+                                                            android:orientation="vertical"
+                                                            android:padding="10dp">
+
+                                                            <androidx.cardview.widget.CardView
+                                                                app:cardBackgroundColor="@android:color/transparent"
+                                                                app:cardCornerRadius="50dp"
+                                                                app:cardElevation="0dp"
+                                                                app:contentPadding="0.5dp"
+                                                                android:layout_width="100dp"
+                                                                android:layout_height="100dp"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_marginTop="10dp"
+                                                                android:padding="2dp">
+
+                                                                <androidx.appcompat.widget.AppCompatImageView
+                                                                    android:id="@+id/image_1"
+                                                                    android:layout_width="100dp"
+                                                                    android:layout_height="100dp"
+                                                                    android:scaleType="fitXY"
+                                                                    android:background="@drawable/addimage"
+                                                                    android:layout_gravity="center_horizontal|center_vertical" />
+
+
+                                                            </androidx.cardview.widget.CardView>
+
+                                                        </LinearLayout>
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+                                                </LinearLayout>
+
+                                            </androidx.cardview.widget.CardView>
+
+                                            <androidx.cardview.widget.CardView
+                                                app:cardBackgroundColor="@android:color/transparent"
+                                                app:cardCornerRadius="0dp"
+                                                app:cardElevation="1dp"
+                                                app:contentPadding="0.5dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@color/white"
+                                                    android:clickable="false"
+                                                    android:focusable="true"
+                                                    android:gravity="center_vertical|center"
+                                                    android:orientation="vertical"
+                                                    android:padding="0dp">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        app:cardBackgroundColor="@android:color/transparent"
+                                                        app:cardElevation="0dp"
+                                                        app:contentPadding="0.5dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@android:color/transparent"
+                                                            android:clickable="false"
+                                                            android:focusable="true"
+                                                            android:gravity="center_vertical|center"
+                                                            android:orientation="vertical"
+                                                            android:padding="10dp">
+
+                                                            <androidx.cardview.widget.CardView
+                                                                app:cardBackgroundColor="@android:color/transparent"
+                                                                app:cardCornerRadius="50dp"
+                                                                app:cardElevation="0dp"
+                                                                app:contentPadding="0.5dp"
+                                                                android:layout_width="100dp"
+                                                                android:layout_height="100dp"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_marginTop="10dp"
+                                                                android:padding="2dp">
+
+                                                                <androidx.appcompat.widget.AppCompatImageView
+                                                                    android:id="@+id/image_2"
+                                                                    android:layout_width="100dp"
+                                                                    android:layout_height="100dp"
+                                                                    android:scaleType="fitXY"
+                                                                    android:background="@drawable/addimage"
+                                                                    android:layout_gravity="center_horizontal|center_vertical" />
+
+
+                                                            </androidx.cardview.widget.CardView>
+
+                                                        </LinearLayout>
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+                                                </LinearLayout>
+
+                                            </androidx.cardview.widget.CardView>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:background="@android:color/transparent"
+                                            android:orientation="horizontal">
+
+                                            <androidx.cardview.widget.CardView
+                                                app:cardBackgroundColor="@android:color/transparent"
+                                                app:cardCornerRadius="0dp"
+                                                app:cardElevation="1dp"
+                                                app:contentPadding="0.5dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@color/white"
+                                                    android:clickable="false"
+                                                    android:focusable="true"
+                                                    android:gravity="center_vertical|center"
+                                                    android:orientation="vertical"
+                                                    android:padding="0dp">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        app:cardBackgroundColor="@android:color/transparent"
+                                                        app:cardElevation="0dp"
+                                                        app:contentPadding="0.5dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@android:color/transparent"
+                                                            android:clickable="false"
+                                                            android:focusable="true"
+                                                            android:gravity="center_vertical|center"
+                                                            android:orientation="vertical"
+                                                            android:padding="10dp">
+
+                                                            <androidx.cardview.widget.CardView
+                                                                app:cardBackgroundColor="@android:color/transparent"
+                                                                app:cardCornerRadius="50dp"
+                                                                app:cardElevation="0dp"
+                                                                app:contentPadding="0.5dp"
+                                                                android:layout_width="100dp"
+                                                                android:layout_height="100dp"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_marginTop="10dp"
+                                                                android:padding="2dp">
+
+                                                                <androidx.appcompat.widget.AppCompatImageView
+                                                                    android:id="@+id/image_3"
+                                                                    android:layout_width="100dp"
+                                                                    android:layout_height="100dp"
+                                                                    android:scaleType="fitXY"
+                                                                    android:background="@drawable/addimage"
+                                                                    android:layout_gravity="center_horizontal|center_vertical" />
+
+
+                                                            </androidx.cardview.widget.CardView>
+
+                                                        </LinearLayout>
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+                                                </LinearLayout>
+
+                                            </androidx.cardview.widget.CardView>
+
+                                            <androidx.cardview.widget.CardView
+                                                app:cardBackgroundColor="@android:color/transparent"
+                                                app:cardCornerRadius="0dp"
+                                                app:cardElevation="1dp"
+                                                app:contentPadding="0.5dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@color/white"
+                                                    android:clickable="false"
+                                                    android:focusable="true"
+                                                    android:gravity="center_vertical|center"
+                                                    android:orientation="vertical"
+                                                    android:padding="0dp">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        app:cardBackgroundColor="@android:color/transparent"
+                                                        app:cardElevation="0dp"
+                                                        app:contentPadding="0.5dp"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@android:color/transparent"
+                                                            android:clickable="false"
+                                                            android:focusable="true"
+                                                            android:gravity="center_vertical|center"
+                                                            android:orientation="vertical"
+                                                            android:padding="10dp">
+
+                                                            <androidx.cardview.widget.CardView
+                                                                app:cardBackgroundColor="@android:color/transparent"
+                                                                app:cardCornerRadius="50dp"
+                                                                app:cardElevation="0dp"
+                                                                app:contentPadding="0.5dp"
+                                                                android:layout_width="100dp"
+                                                                android:layout_height="100dp"
+                                                                android:layout_gravity="center_horizontal"
+                                                                android:layout_marginTop="10dp"
+                                                                android:padding="2dp">
+
+                                                                <androidx.appcompat.widget.AppCompatImageView
+                                                                    android:id="@+id/image_4"
+                                                                    android:layout_width="100dp"
+                                                                    android:layout_height="100dp"
+                                                                    android:scaleType="fitXY"
+                                                                    android:background="@drawable/addimage"
+                                                                    android:layout_gravity="center_horizontal|center_vertical" />
+
+
+                                                            </androidx.cardview.widget.CardView>
+
+                                                        </LinearLayout>
+
+
+                                                    </androidx.cardview.widget.CardView>
+
+
+                                                </LinearLayout>
+
+                                            </androidx.cardview.widget.CardView>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/bill_submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/colorPrimaryDark"
+                            android:fontFamily="@font/segoe_ui"
+                            android:minWidth="240dp"
+                            android:minHeight="56dp"
+                            android:text="SUBMIT"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </com.zanrite.groomme.helpers.MyViewPager>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/p1"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

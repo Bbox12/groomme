@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
+android {
+    signingConfigs {
+        groomme {
+            storeFile file('/Users/parag/Documents/SalonApp/key/key1')
+            storePassword '9954059912aA'
+            keyAlias = 'key1'
+            keyPassword '9954059912aA'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.zanrite.groomme"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 21
+        versionName "1.0.20"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.groomme
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.groomme
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+android {
+    useLibrary 'org.apache.http.legacy'
+    buildToolsVersion "29.0.2"
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation('org.apache.httpcomponents:httpmime:4.5.11') {
+        exclude module: "httpclient"
+    }
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.0-alpha03'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-perf:19.0.5'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.3.0-alpha03'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha03'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.google.maps.android:android-maps-utils:0.6.2'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
+    implementation 'com.github.andreilisun:swipedismissdialog:0.1'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
+    implementation 'com.firebase:firebase-client-android:2.5.2+'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.google.firebase:firebase-invites:17.0.0'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+}

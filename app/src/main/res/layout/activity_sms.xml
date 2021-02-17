@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/up">
+
+
+        <com.zanrite.groomme.helpers.MyViewPager
+            android:id="@+id/viewPagerVertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/collapse_round_corner">
+
+            <ScrollView
+                android:id="@+id/firstlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fillViewport="true"
+                android:padding="10dp"
+                android:scrollbarSize="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/_l1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <!-- Email Label -->
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/m0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="10dp"
+                            android:minHeight="56dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline"
+                            app:hintTextAppearance="@style/MyHintText">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/input_user_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="true"
+                                android:drawableStart="@drawable/ic_phone"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:hint="Mobile no or Email Address"
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|text"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/signout"
+                        android:ems="12"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:imeOptions="actionDone"
+                        android:padding="5dp"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/secondlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="240dp"
+                android:background="@drawable/collapse_round_corner"
+                android:fillViewport="true"
+                android:padding="10dp"
+                android:scrollbarSize="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/_l12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <!-- Email Label -->
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/m1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="10dp"
+                            android:minHeight="56dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline"
+                            app:hintTextAppearance="@style/MyHintText">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/input_user_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_password"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:hint="New Password"
+                                android:imeOptions="actionNext"
+                                android:inputType="textNoSuggestions|textPassword"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/m2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:minHeight="56dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline"
+                            app:hintTextAppearance="@style/MyHintText"
+                            app:passwordToggleEnabled="true">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/input_user_confirm_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_password"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:hint="Confirm Password"
+                                android:imeOptions="actionNext"
+                                android:inputType="textNoSuggestions|textPassword"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/signup2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/signout"
+                        android:ems="12"
+                        android:fontFamily="@font/segoe_ui_bold"
+                        android:imeOptions="actionDone"
+                        android:padding="5dp"
+                        android:text="Change Password"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </com.zanrite.groomme.helpers.MyViewPager>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

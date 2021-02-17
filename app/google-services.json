@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "641633839271",
+    "firebase_url": "https://groomme-269613.firebaseio.com",
+    "project_id": "groomme-269613",
+    "storage_bucket": "groomme-269613.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641633839271:android:23a3f70e80ed0ddc905382",
+        "android_client_info": {
+          "package_name": "com.zanrite.groomme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641633839271-0mnu90t8rmnqkh8ia4a0i8r353jqsdik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zanrite.groomme",
+            "certificate_hash": "71ab1dfe24b2778ee954a6e4fc7396529a78467a"
+          }
+        },
+        {
+          "client_id": "641633839271-7ch8d13b7nrt4cq75ofetdju8oeo8q8s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zanrite.groomme",
+            "certificate_hash": "c9f5f5432306012156e8bbbb5172fb447293b002"
+          }
+        },
+        {
+          "client_id": "641633839271-umvmt3co9pf89i33o0smh6dk30d9sl6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zanrite.groomme",
+            "certificate_hash": "6584623ee4d832bac11820ce19f29e2f94e07a56"
+          }
+        },
+        {
+          "client_id": "641633839271-l29fkkrh3qgr2rfb47hjst9g40n31g4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIUtUswDl70IhHdIfVNFoHflnbDjCZvL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641633839271-l29fkkrh3qgr2rfb47hjst9g40n31g4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

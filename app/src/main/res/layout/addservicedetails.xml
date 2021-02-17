@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="visible"
+        app:expanded="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:collapsedTitleGravity="center_vertical|start"
+            app:contentScrim="@color/black"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:scrimAnimationDuration="1200">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:background="@color/black">
+
+                    <ImageView
+                        android:id="@+id/top1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:id="@+id/_l2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/collapse_round_corner"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/_textprimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center_horizontal"
+                            android:text="Please add "
+                            android:textColor="@color/top"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/_textsecondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center_horizontal"
+                            android:text="Service details"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbardd"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Service"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/textView101"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Details"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:fitsSystemWindows="false"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:minHeight="320dp">
+
+            <Button
+                android:id="@+id/_serviceFrom"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="false"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.2"
+                android:background="@color/quantum_googgreen400"
+                android:fontFamily="@font/segoe_ui"
+                android:minWidth="200dp"
+                android:padding="10dp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/_serviceFrom"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/_rsalon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/openbackground">
+
+                    <CheckBox
+                        android:id="@+id/thisplacesalon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/rmap"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:minEms="8"
+                        android:text="At salon "
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <EditText
+                        android:id="@+id/_detailsalon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thisplacesalon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/editTextBackground"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:hint="Details (optional)"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:minHeight="56dp"
+                        android:nextFocusDown="@id/_salon_price"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/_detailsalon"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="?attr/editTextBackground"
+                            android:textColorHint="@color/colorPrimaryDark">
+
+                            <EditText
+                                android:id="@+id/_salon_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/ic_currency"
+                                android:drawableLeft="@drawable/ic_currency"
+                                android:ems="10"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:hint="Price"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:nextFocusRight="@id/_salon_time" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="?attr/editTextBackground"
+                            android:textColorHint="@color/colorPrimaryDark">
+
+                            <EditText
+                                android:id="@+id/_salon_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.33"
+                                android:background="@android:color/transparent"
+                                android:ems="10"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:hint="Duration in minutes"
+                                android:imeOptions="actionNext"
+                                android:inputType="time" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/_hsalon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/closebackground">
+
+                    <CheckBox
+                        android:id="@+id/thisplacehome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="At home"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <EditText
+                        android:id="@+id/_detailshome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thisplacehome"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/editTextBackground"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:hint="Details (optional)"
+                        android:imeOptions="actionDone|actionGo"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:minHeight="56dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/_detailshome"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="?attr/editTextBackground"
+                            android:textColorHint="@color/colorPrimaryDark">
+
+                            <EditText
+                                android:id="@+id/_home_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/ic_currency"
+                                android:drawableLeft="@drawable/ic_currency"
+                                android:ems="10"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:hint="Price"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.Design.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="?attr/editTextBackground"
+                            android:textColorHint="@color/colorPrimaryDark">
+
+                            <EditText
+                                android:id="@+id/_home_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.33"
+                                android:background="@android:color/transparent"
+                                android:ems="10"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:hint="Duration in minutes"
+                                android:imeOptions="actionNext"
+                                android:inputType="time" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.05"
+                android:background="@drawable/editt2"
+                android:fontFamily="@font/segoe_ui"
+                android:minWidth="200dp"
+                android:padding="10dp"
+                android:text="SUBMIT"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarSplash"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:max="500"
+        android:progress="0"
+        android:progressDrawable="@drawable/circular_progressbar" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

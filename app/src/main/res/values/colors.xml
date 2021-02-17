@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <color name="colorPrimary">@color/quantum_lightblue</color>
+    <color name="colorPrimaryDark">@color/quantum_lightblue500</color>
+    <color name="colorAccent">@color/highBlue</color>
+    <color name="black_overlay">#66000000</color>
+
+    <!-- dots active colors -->
+    <color name="placeholder_bg">#CCC8C8</color>
+    <color name="refer_main">#dd2c00</color>
+    <color name="highBlue">#1565C0</color>
+    <color name="attend">#006064</color>
+    <color name="gray">#F5F5F5</color>
+    <color name="red">#E53935</color>
+    <color name="transparant">@android:color/transparent</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="white">#ffffff</color>
+    <color name="top">#FF6D00</color>
+    <color name="blue">#2979FF</color>
+    <color name="green">#33D53B</color>
+    <color name="blue_grey_900">#0277BD</color>
+    <color name="green_A400">#4CAF50</color>
+    <color name="blue_grey_800">#29B6F6</color>
+    <color name="black">#000000</color>
+    <color name="red_700">#EF5350</color>
+    <color name="yellow_900">#ffeb3b</color>
+    <color name="grey_400">#e0e0e0</color>
+    <color name="blue_grey_300">#BDBDBD</color>
+    <!-- dots active colors -->
+
+</resources>

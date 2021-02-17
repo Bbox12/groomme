@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:gravity="center_vertical|center"
+    android:minWidth="200dp"
+    android:minHeight="200dp"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+
+<com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/service_pic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.5"
+        android:minWidth="128dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_services" />
+</LinearLayout>

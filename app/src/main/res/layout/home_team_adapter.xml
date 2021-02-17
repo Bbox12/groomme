@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:layout_gravity="start"
+    android:layout_margin="5dp"
+    android:background="@android:color/transparent"
+    android:gravity="start|center_vertical"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   >
+
+        <LinearLayout
+            android:id="@+id/_l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/homecircle">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/_c1"
+                cardCornerRadius="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false">
+
+
+                <ImageView
+                    android:id="@+id/img_profilo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="80dp"
+                    android:minHeight="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_noimage" />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:checked="false"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textSize="14dp"
+            app:buttonTint="@color/red_700" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.4"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="center"
+        android:maxEms="6"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.4"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:textColor="@color/black_overlay"
+        android:textSize="12sp" />
+
+</LinearLayout>
+
+

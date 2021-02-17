@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:expanded="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                app:collapsedTitleGravity="center_vertical|start"
+                app:collapsedTitleTextAppearance="@style/MyTitlle"
+                app:contentScrim="@color/black"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:expandedTitleMargin="14sp"
+                app:expandedTitleTextAppearance="@style/MyTitlle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:scrimAnimationDuration="1200"
+                app:title="Home service selected"
+                app:titleEnabled="true">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/black"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="148dp"
+                        android:background="@color/black">
+
+                        <ImageView
+                            android:id="@+id/top1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbardd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_main"
+        android:layout_gravity="top"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@drawable/collapse_round_corner"
+        android:fillViewport="true"
+        android:fitsSystemWindows="false"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="false"
+            android:gravity="top">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/_lk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Is this your address"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/autocomplete_places_drop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:filterTouchesWhenObscured="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:hint="Search"
+                        android:inputType="textNoSuggestions"
+                        android:minHeight="67dp"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:typeface="normal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_gravity="right"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/google" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/_s1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/_lk"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Put manually"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:gravity="center_vertical"
+                                android:minEms="4"
+                                android:text="Address"
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:animateLayoutChanges="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center|start"
+                                android:inputType="textMultiLine"
+                                android:lines="3"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:background="@android:drawable/screen_background_light_transparent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:gravity="center_vertical"
+                                android:minEms="4"
+                                android:text="House No"
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/house_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:animateLayoutChanges="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center|start"
+                                android:inputType="textMultiLine"
+                                android:lines="3"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:background="@android:drawable/screen_background_light_transparent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:gravity="center_vertical"
+                                android:minEms="4"
+                                android:text="Land Mark"
+                                android:textColor="@color/black" />
+
+                            <EditText
+                                android:id="@+id/land_mark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:animateLayoutChanges="true"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center|start"
+                                android:inputType="textMultiLine"
+                                android:lines="3"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/_s1"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ride_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|end"
+                        android:background="@drawable/button_background"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:inputType="textMultiLine"
+                        android:minEms="12"
+                        android:text="Book Now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/ride_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:minEms="4"
+                        android:text="Back"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarSplash"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="56dp"
+        android:progressDrawable="@drawable/triangle"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+    <include
+        layout="@layout/shimerlayout"
+        />
+
+    <RelativeLayout
+        android:id="@+id/_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:expanded="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:collapsedTitleGravity="center_vertical|start"
+                app:contentScrim="@color/black"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:scrimAnimationDuration="1200">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/layout2"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="center|top"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/primary_text"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="0.7"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="start|center_vertical"
+                                android:inputType="textNoSuggestions"
+                                android:minEms="4"
+                                android:paddingStart="10dp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="start|center_vertical"
+                            android:minEms="4"
+                            android:paddingStart="10dp"
+                            android:text="Your location"
+                            android:textColor="@color/places_autocomplete_search_hint"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_weight="0.4"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.1"
+                                android:src="@drawable/ic_pin" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/secondary_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.9"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="start|center_vertical"
+                                android:minEms="4"
+                                android:textColor="@color/red"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/change"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/ic_loc_change"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="center_vertical"
+                                android:minEms="4"
+                                android:text="Change"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="0dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:orientation="horizontal"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp">
+
+                        <EditText
+                            android:id="@+id/search"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/closebackground"
+                            android:drawableStart="@drawable/ic_search"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="@string/spa"
+                            android:imeOptions="actionSearch"
+                            android:importantForAutofill="no"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:minHeight="36dp"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/places_autocomplete_error_message"
+                            android:textColorLink="@color/white"
+                            android:theme="@style/MyEditText" />
+
+                        <Button
+                            android:id="@+id/_cancel"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/transparant"
+                            android:fontFamily="@font/segoe_ui_bold_italic"
+                            android:gravity="center"
+                            android:text="Cancel"
+                            android:textColor="@color/red"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/rmap"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_below="@id/app_bar_main"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+            android:visibility="visible"
+            tools:context=".UserPart.GooglemapApp">
+
+            <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="false"
+                map:cameraZoom="18"
+                map:mapType="normal">
+
+            </fragment>
+
+
+            <ImageView
+                android:id="@+id/myLocationCustomButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_location"
+                android:visibility="gone" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar3_map"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="false"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/seek_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Total salons"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rmap"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+            android:orientation="vertical"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nearRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

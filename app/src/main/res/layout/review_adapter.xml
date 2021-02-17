@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/reviewer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/editTextBackground"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/segoe_ui"
+        android:inputType="textNoSuggestions"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:typeface="serif" />
+
+            <LinearLayout
+                android:id="@+id/ra2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reviewer"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal|left"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0.00"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="Specialist"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                <RatingBar
+                    android:id="@+id/rate_t"
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:foregroundGravity="center_horizontal|center"
+                    android:numStars="5"
+                    android:progress="@android:integer/config_mediumAnimTime" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ra3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ra2"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="Service"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                <RatingBar
+                    android:id="@+id/rate_s"
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:foregroundGravity="center_horizontal|center"
+                    android:numStars="5"
+                    android:progress="@android:integer/config_mediumAnimTime" />
+            </LinearLayout>
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ra3"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="?attr/editTextBackground"
+        android:elegantTextHeight="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/segoe_ui"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:maxLines="30"
+        android:nestedScrollingEnabled="true"
+        android:scrollIndicators="right"
+        android:singleLine="false"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+        </RelativeLayout>
+

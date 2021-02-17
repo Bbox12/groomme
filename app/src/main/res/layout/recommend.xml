@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical|center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintHeight_min="wrap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_min="wrap">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_vertical|start"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/popular_beauticians"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="1dp"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_arrow"
+                android:paddingStart="5dp"
+                android:text="View All"
+                android:textColor="@color/black_overlay"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="80dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal|center"
+            android:orientation="vertical"
+            android:padding="0.5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:cardBackgroundColor="@color/grey_400"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="0dp">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/_ri1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@color/white"
+                        android:minHeight="164dp"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="bottom|center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/homecircle"
+                            android:clickable="false"
+                            android:focusable="true"
+                            android:gravity="bottom|center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <TextView
+                                android:id="@+id/_rate1"
+                                android:layout_width="64dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/ic_star"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="start|center_vertical"
+                                android:lines="3"
+                                android:maxEms="8"
+                                android:maxLines="3"
+                                android:minHeight="40dp"
+                                android:minEms="8"
+                                android:padding="5dp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/_r1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:background="@android:color/transparent"
+                                android:ems="12"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lines="3"
+                                android:maxEms="8"
+                                android:maxLines="3"
+                                android:minHeight="40dp"
+                                android:minEms="8"
+                                android:padding="5dp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/parlour_name1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="bottom|center_horizontal"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:maxEms="8"
+                                android:minEms="8"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginBottom="36dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/love" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:cardBackgroundColor="@color/grey_400"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="0dp">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/_ri2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:background="@color/white"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="bottom|center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/homecircle"
+                            android:clickable="false"
+                            android:focusable="true"
+                            android:gravity="bottom|start"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <TextView
+                                android:id="@+id/_rate2"
+                                android:layout_width="64dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@android:color/transparent"
+                                android:drawableStart="@drawable/ic_star"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="start|center_vertical"
+                                android:lines="3"
+                                android:maxEms="8"
+                                android:maxLines="3"
+                                android:minHeight="40dp"
+                                android:minEms="8"
+                                android:padding="5dp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/_r2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:background="@android:color/transparent"
+                                android:ems="12"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lines="3"
+                                android:maxEms="8"
+                                android:maxLines="3"
+                                android:minHeight="40dp"
+                                android:minEms="8"
+                                android:padding="5dp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/parlour_name2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:fontFamily="@font/segoe_ui_bold"
+                                android:gravity="center_horizontal|center"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:maxEms="8"
+                                android:minEms="8"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginBottom="36dp"
+                        android:src="@drawable/love" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:cardBackgroundColor="@color/grey_400"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="0dp">
+
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/_ri3"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@android:drawable/screen_background_dark_transparent"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@drawable/homecircle"
+                        android:clickable="false"
+                        android:focusable="true"
+                        android:gravity="bottom|start"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:id="@+id/_rate3"
+                            android:layout_width="64dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/ic_star"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="start|center_vertical"
+                            android:lines="3"
+                            android:maxEms="8"
+                            android:maxLines="3"
+                            android:minHeight="40dp"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/_r3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:background="@android:color/transparent"
+                            android:ems="12"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="center_horizontal|top"
+                            android:lines="3"
+                            android:maxEms="8"
+                            android:maxLines="3"
+                            android:minHeight="40dp"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+
+                        <TextView
+                            android:id="@+id/parlour_name3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/screen_background_dark_transparent"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="center_horizontal|center"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:maxEms="8"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginBottom="36dp"
+                        android:src="@drawable/love" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:cardBackgroundColor="@color/grey_400"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="0dp">
+
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/_ri4"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@android:drawable/screen_background_dark_transparent"
+                        android:minHeight="164dp"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@drawable/homecircle"
+                        android:clickable="false"
+                        android:focusable="true"
+                        android:gravity="bottom|start"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:id="@+id/_rate4"
+                            android:layout_width="64dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/ic_star"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="start|center_vertical"
+                            android:lines="3"
+                            android:maxEms="8"
+                            android:maxLines="3"
+                            android:minHeight="40dp"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/_r4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:background="@android:color/transparent"
+                            android:ems="12"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="center_horizontal|top"
+                            android:lines="3"
+                            android:maxEms="8"
+                            android:maxLines="3"
+                            android:minHeight="40dp"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/parlour_name4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/screen_background_dark_transparent"
+                            android:fontFamily="@font/segoe_ui_bold"
+                            android:gravity="center_horizontal|center"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:maxEms="8"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginBottom="36dp"
+                        android:src="@drawable/love" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

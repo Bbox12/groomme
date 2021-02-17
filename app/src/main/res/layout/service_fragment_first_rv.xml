@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutTop400"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/my_service_all"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@android:drawable/dark_header"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center_vertical|start"
+            android:minEms="8"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:ignore="RtlHardcoded" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/all_fragment_rv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:foregroundGravity="center"
+            android:overScrollMode="never"
+            android:scrollbars="vertical"
+            app:stackFromEnd="true" />
+
+    </LinearLayout>
+</RelativeLayout>

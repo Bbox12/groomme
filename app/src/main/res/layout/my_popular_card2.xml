@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start|left"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_weight="0.7"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/c1"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:cardBackgroundColor="@color/placeholder_bg"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="0dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/service_pic"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:background="@color/white"
+            android:scaleType="fitXY" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+
+            <TextView
+                android:id="@+id/primary_text"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/homecircle"
+                android:ems="12"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:gravity="center_horizontal|center"
+                android:lines="3"
+                android:maxWidth="80dp"
+                android:maxHeight="80dp"
+                android:maxEms="8"
+                android:maxLines="3"
+                android:minHeight="40dp"
+                android:minEms="8"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="top|end"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/red"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|left"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.7"
+            android:theme="@style/RatingBar">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:theme="@style/RatingBar" />
+
+
+            <TextView
+                android:id="@+id/_norating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="top"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/ratingBar"
+                android:background="@color/transparant"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="top"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/booknow1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="120dp"
+        android:background="@color/top"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:gravity="bottom|center_horizontal"
+        android:minWidth="128dp"
+        android:minEms="4"
+        android:paddingBottom="10dp"
+        android:text="Book"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</RelativeLayout>

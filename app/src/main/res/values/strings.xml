@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Groom me</string>
+    <string name="privacy_policy"><u>Privacy</u></string>
+    <string name="policys"><u>Policy</u></string>
+    <string name="action_refresh">Refresh</string>
+    <string name="atsalon">I provide service at my salon</string>
+    <string name="athome">I provide service at home</string>
+    <string name="atboth">I provide service at both salon &amp; home</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="_00_00">00:00</string>
+    <string name="spa">Search for your favorite salon, spa and stylist</string>
+    <string name="permission_rationale">permission required</string>
+    <string name="permission_denied_explanation">Please allow required permissions</string>
+    <string name="settings">Settings</string>
+    <string name="share_using">Share</string>
+    <string name="no_service_added_please_add_service">No service added. Please add service.</string>
+    <string-array name="Gender_Names">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="deals_of_the_day">Deals of the Day</string>
+    <string name="new_launches">New Launches</string>
+    <string name="popular_salons">Popular Salons</string>
+    <string name="view_all">View All</string>
+    <string name="popular_beauticians">Popular Beauticians</string>
+    <string name="terms_amp"><u><![CDATA[Terms &]]></u></string>
+    <string name="conditions"><u>Conditions</u></string>
+    <string name="salon_owner">Salon Owner</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forgot_password">Change password</string>
+    <string name="time_12am">12 am</string>
+    <string name="time_1am">1 am</string>
+    <string name="time_2am">2 am</string>
+    <string name="time_3am">3 am</string>
+    <string name="time_4am">4 am</string>
+    <string name="time_5am">5 am</string>
+    <string name="time_6am">6 am</string>
+    <string name="time_7am">7 am</string>
+    <string name="time_8am">8 am</string>
+    <string name="time_9am">9 am</string>
+    <string name="time_10am">10 am</string>
+    <string name="time_11am">11 am</string>
+    <string name="time_12pm">12 pm</string>
+    <string name="time_13pm">13 pm</string>
+    <string name="time_14pm">14 pm</string>
+    <string name="time_15pm">15 pm</string>
+    <string name="time_16pm">16 pm</string>
+    <string name="time_17pm">17 pm</string>
+    <string name="time_18pm">18 pm</string>
+    <string name="time_19pm">19 pm</string>
+    <string name="time_20pm">20 pm</string>
+    <string name="time_21pm">21 pm</string>
+    <string name="time_22pm">22 pm</string>
+    <string name="time_23pm">23 pm</string>
+    <string name="time_24pm">24 pm</string>
+    <string name="current_day_date">8 October, 2016</string>
+</resources>

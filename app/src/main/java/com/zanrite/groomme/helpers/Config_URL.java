@@ -1,0 +1,57 @@
+package com.zanrite.groomme.helpers;
+
+//This class is for storing all URLs as a model of URLs
+public class Config_URL {
+    public static final int NOTIFICATION_ID = 100;
+    public static final int NOTIFICATION_ID_BIG_IMAGE = 101;
+    public static final String SHARED_PREF = "ah_firebase";
+    public static final String PUSH_NOTIFICATION = "pushNotification";
+    public static final String URL_SALON_REGISTYRATION = "http://139.59.38.160/Groom/App/salon_registration.php";
+    public static final String STORE_SERVICE_LOCATION = "http://139.59.38.160/Groom/App/salon_service_preference.php";
+    public static final String STORE_LATLONG = "http://139.59.38.160/Groom/App/salon_latlong.php";
+    public static final String URL_SCHEDULE = "http://139.59.38.160/Groom/App/Schedule_salon.php";
+    public static final String GETCREWIMAGE = "http://139.59.38.160/Groom/App/get_Crew.php";
+    public static final String CREW_DETAIL = "http://139.59.38.160/Groom/App/store_specialist.php";
+    public static final String URL_REQUEST_MOBILE = "http://139.59.38.160/Groom/App/User_mobile_check.php";
+    public static final String GETSERVICES = "http://139.59.38.160/Groom/App/get_Services.php";
+    public static final String GETSECONDARYSERVICES = "http://139.59.38.160/Groom/App/get_secondaryServices.php";
+    public static final String GETGALLEY = "http://139.59.38.160/Groom/App/get_gallery.php";
+    public static final String GALLERY_DETAIL = "http://139.59.38.160/Groom/App/store_gallery.php";
+    public static final String REMOVE_LATLONG = "http://139.59.38.160/Groom/App/remove_latlong.php";
+    public static final String STORE_SALON_SERVICE = "http://139.59.38.160/Groom/App/store_salon_service.php";
+    public static final String STORE_SALONHOME_SERVICE = "http://139.59.38.160/Groom/App/store_salonhome_service.php";
+    public static final String STORE_SALONHOME_SERVICE_ID = "http://139.59.38.160/Groom/App/store_salonhome_service_ID.php";
+    public static final String GETCREWIMAGEONE = "http://139.59.38.160/Groom/App/get_Crew_id.php";
+    public static final String CREW_DELETE = "http://139.59.38.160/Groom/App/Crew_delete.php";
+    public static final String GETSERVICEFRAGMENT = "http://139.59.38.160/Groom/App/get_service_fragment.php";
+    public static final String GETSERVICEWITHID = "http://139.59.38.160/Groom/App/get_service_fragment_with_ID.php";
+    public static final String STORE_SALONHOME_SERVICE_DELETE = "http://139.59.38.160/Groom/App/delete_service_ID.php";
+    public static final String GET_ALL_PARLOURS = "http://139.59.38.160/Groom/App/get_details_for_users.php";
+    public static final String GET_LOGIN = "http://139.59.38.160/Groom/App/get_login.php";
+    public static final String UPDATE_PROFILE = "http://139.59.38.160/Groom/App/update_profile.php";
+    public static final String GET_PARTICULAR_SERVICES = "http://139.59.38.160/Groom/App/get_particular_services.php";
+    public static final String URL_BOOKING = "http://139.59.38.160/Groom/App/store_book_order.php";
+    public static final String REGISTRATION_COMPLETE = "registrationComplete";
+    public static final String URL_GETR_OTP = "http://139.59.38.160/Groom/App/get_OTP.php";
+    public static final String SALON_ACCPTED = "http://139.59.38.160/Groom/App/salin_accpted.php";
+    public static final String SALON_CANCELED = "http://139.59.38.160/Groom/App/salon_canceled.php";
+    public static final String CUSTOMER_CANCELED = "http://139.59.38.160/Groom/App/customer_canceled.php";
+    public static final String GET_PAST_BOOKINGS = "http://139.59.38.160/Groom/App/get_past_bookings.php";
+    public static final String SALON_RUNNING = "http://139.59.38.160/Groom/App/salon_running.php";
+    public static final String GET_THE_BOOKING = "http://139.59.38.160/Groom/App/get_the_booking.php";
+    public static final String STORE_COMMENTS = "http://139.59.38.160/Groom/App/store_comments.php";
+    public static final String STORE_COMMENTS_SALON = "http://139.59.38.160/Groom/App/store_comments_salon.php";
+    public static final String STORE_MESSAGE ="http://139.59.38.160/Groom/App/store_message.php";
+    public static final String URL_REQUEST_SUBSCRIPTION ="http://139.59.38.160/Groom/App/get_subscription.php";
+    public static final String GET_BOOKING_REPORTS_CALENDER ="http://139.59.38.160/Groom/App/get_booking_for_calender.php";
+    public static final String CREW_LEAVE ="http://139.59.38.160/Groom/App/crew_leave.php";
+    public static final String URL_BOOKING_PRICE ="http://139.59.38.160/Groom/App/store_booking_price.php";
+    public static final String URL_BOOKING_ADDRESS ="http://139.59.38.160/Groom/App/store_booking_address.php";
+    public static final String URL_BOOKING_MODE ="http://139.59.38.160/Groom/App/store_booking_pmode.php";
+    public static final String URL_GET_ALL_MESSAGE ="http://139.59.38.160/Groom/App/get_all_messages.php";
+    public static final String GET_ALL_PARLOURS_HOMEPAGE ="http://139.59.38.160/Groom/App/get_details_homepage.php";
+    public static final String GET_LOCATION = "http://139.59.38.160/Groom/App/getLocation.php";
+    public static final String URL_SIGNUP ="http://139.59.38.160/Groom/App/signup.php";
+    public static final String URL_SIGNIN ="http://139.59.38.160/Groom/App/signin.php";
+    public static final String APIKEY = "AIzaSyBGCYHr6KetBnbnC2A5F0FO1E0KI3b-qpY";
+}

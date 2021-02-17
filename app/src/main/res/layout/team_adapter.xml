@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_team"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center"
+    android:layout_margin="3dp"
+    android:fitsSystemWindows="false"
+    android:layoutMode="opticalBounds"
+    android:minWidth="165dp"
+    android:minHeight="165dp"
+    app:cardBackgroundColor="@color/quantum_white_text"
+    app:cardCornerRadius="8dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:minWidth="165dp"
+            android:minHeight="165dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:visibility="visible">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c2"
+                cardCornerRadius="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:padding="2dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false">
+
+                <ImageView
+                    android:id="@+id/pics"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:baselineAlignBottom="false"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/addimage" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/_l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="20dp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/monswitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:height="15dp"
+                    android:buttonTint="@color/blue"
+                    android:gravity="bottom"
+                    android:padding="5dp"
+                    android:pointerIcon="grabbing"
+                    android:showText="true"
+                    android:splitTrack="true"
+                    android:switchMinWidth="10dp"
+                    android:textColor="@color/black"
+                    android:textDirection="inherit"
+                    android:textOff="Available"
+                    android:textOn="On Leave"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:theme="@style/Base.Widget.AppCompat.CompoundButton.Switch"
+                    android:track="@color/colorPrimary"
+                    android:trackTintMode="multiply"
+                    android:typeface="serif"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/_l1"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/textView101"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center_horizontal"
+                android:text="Service"
+                android:textColor="@color/black_overlay"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/overflow"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="2dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_dots" />
+
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/available"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="false"
+        android:layout_gravity="start"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="center_horizontal|top"
+        android:rotation="315"
+        android:textColor="@color/blue_grey_300"
+        android:textSize="14sp" />
+
+</androidx.cardview.widget.CardView>

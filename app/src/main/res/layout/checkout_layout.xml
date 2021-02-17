@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="visible"
+        app:elevation="0dp"
+        app:expanded="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:collapsedTitleGravity="center_vertical|start"
+            app:contentScrim="@color/black"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:expandedTitleMargin="18dp"
+            app:expandedTitleTextAppearance="@style/WindowTitleStyle"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:scrimAnimationDuration="1200"
+            app:title="Check Out"
+            app:titleEnabled="true">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:background="@color/black">
+
+                    <ImageView
+                        android:id="@+id/top1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:textSize="14sp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="start|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="0.7"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:minEms="4"
+                        android:padding="3dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@drawable/collapse_round_corner"
+        android:fillViewport="true"
+        android:fitsSystemWindows="false"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center_vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/dst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="?android:selectableItemBackground"
+                    android:text="R"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/segoe_ui" />
+
+                <TextView
+                    android:id="@+id/canteen_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@+id/dst"
+                    android:layout_toRightOf="@+id/dst"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/segoe_ui" />
+
+                <TextView
+                    android:id="@+id/_noofItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="2dp"
+                    android:gravity="right|center_vertical|end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="no of items"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/segoe_ui" />
+
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:nestedScrollingEnabled="true">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:background="@drawable/editt2"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center_vertical|center_horizontal|start"
+                        android:minEms="3"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Booking details"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:fontFamily="@font/segoe_ui" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/moreRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="3dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/white"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:background="?attr/editTextBackground"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:text="Billing"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:fontFamily="@font/segoe_ui" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_gravity="top"
+                            android:background="@color/white"
+                            android:gravity="top"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <EditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:layout_toLeftOf="@+id/_tamount"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Total Amount"
+                                android:textColor="#9e9e9e"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+
+                            <EditText
+
+                                android:id="@+id/_tamount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@color/white"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:minEms="4"
+                                android:text="00.00"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_gravity="top"
+                            android:background="@color/white"
+                            android:gravity="top"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <EditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_toLeftOf="@+id/_damount"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Discount"
+                                android:textColor="#9e9e9e"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+
+                            <EditText
+
+                                android:id="@+id/_damount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@color/white"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:minEms="4"
+                                android:text="00.00"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/can"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_gravity="top"
+                            android:background="@color/white"
+                            android:gravity="top"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <EditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_toLeftOf="@+id/_camount"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Previous Cancellation Charge"
+                                android:textColor="#9e9e9e"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+
+                            <EditText
+
+                                android:id="@+id/_camount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@color/white"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:minEms="4"
+                                android:text="00:00"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#78909c" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_gravity="top"
+                            android:background="@color/white"
+                            android:gravity="top"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <EditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_toLeftOf="@+id/_payamount"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="Total Payable Amount"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+
+                            <EditText
+
+                                android:id="@+id/_payamount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/segoe_ui"
+                                android:minEms="4"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:fontFamily="@font/segoe_ui" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_margin="10dp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/_confirm_book"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right|end"
+                                android:background="@drawable/button_background"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:minEms="6"
+                                android:text="Book Now"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <Button
+                                android:id="@+id/_cancel_book"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="false"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right|end"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/segoe_ui"
+                                android:gravity="center"
+                                android:inputType="textMultiLine"
+                                android:minEms="6"
+                                android:text="Cancel Booking"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar3_eats"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

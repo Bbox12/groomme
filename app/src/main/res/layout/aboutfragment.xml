@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="true"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar21"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="?attr/editTextBackground"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="start"
+                android:inputType="textNoSuggestions"
+                android:text="About"
+                android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+
+            <TextView
+                android:id="@+id/aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="start"
+                android:lines="3"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="?attr/editTextBackground"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="start"
+                android:text="Opening Hours"
+                android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Monday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Lmon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/monopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/monclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Tuesday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Ltue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/tueopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tueclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_w"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Wednesday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Lwed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/wedopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/wedclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_th"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Thursday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Lthr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/thropen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/thrclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Friday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Lfri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/friopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/friclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Satureday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Lsat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/satopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/satclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="@string/_00_00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.14"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        android:id="@+id/_su"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="6"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center"
+                        android:text="Sunday"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/Lsun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/sunopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/sunclose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="bottom|center_horizontal"
+
+
+                            android:shadowColor="@color/white"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="?attr/editTextBackground"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="start"
+                android:text="Address"
+                android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="visible">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:lines="3"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/pinno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/mobileo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="start"
+                        android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rmap"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:visibility="visible">
+
+
+                    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="false"
+                        android:background="@android:color/transparent"
+                        map:cameraZoom="16"
+                        map:mapType="normal" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
